@@ -1,0 +1,48 @@
+{
+  "name": "teste-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js",
+    "build": "./node_modules/.bin/babel src --out-dir dist",
+    "start": "node dist/server.js"
+  },
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "edge": "17",
+          "firefox": "60",
+          "chrome": "67",
+          "safari": "11.1"
+        },
+        "useBuiltIns": "usage",
+        "corejs": "3.6.5"
+      }
+    ]
+  ],
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "helmet": "^6.0.0",
+    "mongoose": "^6.4.3",
+    "morgan": "^1.10.0",
+    "node-schedule": "^2.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.19.3",
+    "@babel/preset-env": "^7.19.4",
+    "eslint": "^8.18.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
+  }
+}
